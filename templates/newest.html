@@ -1,0 +1,28 @@
+<html lang="bg">
+    <head>
+        <title>Най-нови</title>
+        <meta name="url" content="newest.html" />
+    </head>
+    <body>
+        <h2 class="page-title">Най-нови</h2>
+        <div class="newest-wrapper">
+            {% for article in site.posts %}
+                <section class="newest-post">
+                    <section class="newest-post-image">
+                        <figure>
+                            <img src="{{ article.image }}" alt="">
+                        </figure>
+                    </section>
+                    <section class="newest-post-text">
+                        <h5>{{ article.title }}</h5>
+                        <p>{{ article.published }}</p>
+                        <p>{{ article.summary }}</p>
+                        <a href="{{ site.baseurl }}{{ article.url }}">Прочети</a>
+                    </section>
+                </section>
+            {% endfor %}
+        </div>
+    </body>
+</html>
+
+

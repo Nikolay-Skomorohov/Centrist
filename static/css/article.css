@@ -1,0 +1,115 @@
+.article {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      "header header header header"
+      "text text text text"
+      "aside aside aside aside"
+      "footer footer footer footer"
+}
+
+.article-header {
+    grid-area: header;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.article-pic {
+    position: relative;
+    flex: 1 0 auto;
+}
+
+.article-pic:before {
+    content: "";
+    display: block;
+    padding-top: 56.25%;
+}
+
+.article-pic img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0; left:0;
+}
+
+.article-title {
+}
+
+.article-date {
+}
+
+.article-author {
+    padding-bottom: 1em;
+}
+
+.article-text {
+    grid-area: text;
+}
+
+.article-aside {
+    grid-area: aside;
+    padding: 0;
+    justify-self: center;
+}
+
+.article-aside header h6 {
+    padding: 0;
+}
+
+.article-aside ul {
+    display: flex;
+    flex-flow: row wrap;
+    list-style: none;
+    padding-left: 1em;
+    padding-right: 0;
+    margin: 0;
+    align-items: flex-start;
+}
+
+.article-aside ul li {
+    flex: 1 1 40%;
+    padding: 0.5em;
+}
+
+.article-aside li:hover {
+    cursor: pointer;
+    background-color: var(--site-accent-color);
+    color: var(--heading-footer-text-color);
+}
+
+.article-footer {
+    grid-area: footer;
+}
+
+@media only screen and ( min-width: 768px ) {
+    .article-aside header h6 {
+        padding: 0 0 0.5em 0;
+  }
+
+    .article-aside ul {
+        flex-flow: wrap row;
+  }
+
+    .article-aside ul li {
+        flex: 0 0 25%;
+  }
+}
+
+@media only screen and ( min-width: 1200px ) {
+    .article {
+        grid-template-areas:
+            "header header header header"
+            "text text text aside"
+            "footer footer footer footer"
+    }
+
+    .article-aside ul {
+        flex-flow: column nowrap;
+  }
+
+    .article-aside ul li {
+        flex: 0 0 auto;
+    }
+}

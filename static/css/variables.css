@@ -1,0 +1,20 @@
+:root {
+    --site-font-size-mobile: 18px;
+    --site-font-size-desktop: 20px;
+    --site-font-family-general: Arial;
+    --site-font-family-headings: Georgia;
+    --site-title-font-size: 2.3em;
+    --site-header-icon-size: 1.5em;
+    --site-footer-icon-size: 2.5em;
+
+    --primary-background-color: whitesmoke;
+    --primary-text-color: black;
+    --heading-footer-background-color: rgb(65, 65, 65);
+    --heading-footer-text-color: white;
+    --site-accent-color: royalblue;
+
+    --header-padding: 0 0.5rem;
+    --main-padding: 1em;
+    --aside-padding: 1em;
+    --footer-padding: 0;
+}
