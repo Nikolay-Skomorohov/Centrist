@@ -1,0 +1,45 @@
+{%  extends 'common/index.html' %}
+
+{% block content %}
+
+<h3 class="page-title">Newsletter</h3>
+<section class="newsletter-wrapper">
+    <p>Абонирай се да получаваш най-новите публикувани статии по пощата. </p>
+    <p>Можеш да отбележиш дали да получаваш всичко или само избрани категории. </p>
+    <form action="#" class="newsletter-form">
+        <ul class="form-categories">
+            <li>
+                <input type="checkbox" id="all">
+                <label for="all">Всички</label>
+            </li>
+            <li>
+                <input type="checkbox" id="category1">
+                <label for="category1">Категория A</label>
+            </li>
+            <li>
+                <input type="checkbox" id="category2">
+                <label for="category2">Категория B</label>
+            </li>
+            <li>
+                <input type="checkbox" id="category3">
+                <label for="category3">Категория C</label>
+            </li>
+            <li>
+                <input type="checkbox" id="category4">
+                <label for="category4">Категория D</label>
+            </li>
+            <li>
+                <input type="checkbox" id="category5">
+                <label for="category5">Категория F</label>
+            </li>
+        </ul>
+
+        <ul class="newsletter-email-form">
+            <li class="newsletter-email-input"><input type="email" id="email" placeholder="email@provider.com"></li>
+            <li class="newsletter-email-label"><label for="email"><a href="#">Абонирай се</a></label></li>
+        </ul>
+    </form>
+    <p>Ако желаете да се отпишете, моля въведи своя email и кликни <a href="#">тук</a>.</p>
+</section>
+
+{% endblock content %}

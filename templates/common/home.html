@@ -1,0 +1,24 @@
+{%  extends 'common/index.html' %}
+
+{% block content %}
+
+<div class="newest-wrapper">
+    {% for article in articles_list %}
+        <section class="newest-post">
+            <section class="newest-post-image">
+                <figure>
+                    <img src="{{ article.image }}" alt="">
+                </figure>
+            </section>
+            <section class="newest-post-text">
+                <h5>{{ article.title }}</h5>
+                <p>{{ article.create_date }}</p>
+                <p>{{ article.summary }}</p>
+                <a href="{% url 'article_page' article.id %}">Прочети</a>
+            </section>
+        </section>
+    {% endfor %}
+</div>
+
+{% endblock content %}
+

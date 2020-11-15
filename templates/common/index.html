@@ -1,10 +1,12 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <script src="https://kit.fontawesome.com/9cd6a1b86f.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/static/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'common/css/styles.css' %}">
     <script>
         window.addEventListener('load', (event) => {
             document.querySelector('body').classList.add('loaded');
@@ -18,11 +20,14 @@
             <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-toggle">
             <label for="mobile-menu-toggle"><i class="fas fa-bars"></i></label>
             <nav class="site-header-navigation">
-                {% for x in pages %}
-                    <div><a href="{{ x.url }}">{{ x.title }}</a></div>
-                {% endfor %}
+                <div><a href="{% url "index" %}">Най-нови</a></div>
+                <div><a href="{% url "categories" %}">Категории</a></div>
+                <div><a href="{% url "gallery" %}">Галерия</a></div>
+                <div><a href="{% url "newsletter" %}">Newsletter</a></div>
+                <div><a href="{% url "about" %}">За сайта</a></div>
+                <div><a href="{% url "profile" %}">Профил</a></div>
             </nav>
-            <h1 class="site-header-title"><a href="index.html">Центрист</a></h1>
+            <h1 class="site-header-title"><a href="{% url "index" %}">Центрист</a></h1>
             <input type="checkbox" id="mobile-search-toggle" class="mobile-search-toggle">
             <div class="site-header-search">
                 <label for="mobile-search-toggle"><i class="fas fa-search"></i></label>
@@ -31,14 +36,17 @@
                 </ul>
             </div>
         </header>
+
         <main class="site-main">
 
-            {{ content }}
+            {% block content %} {% endblock content %}
 
         </main>
+
         <aside class="site-aside">
 
         </aside>
+
         <footer class="site-footer">
             <address>
                 <ul class="site-footer-social-media-icons">

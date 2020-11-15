@@ -1,0 +1,36 @@
+{%  extends 'common/index.html' %}
+
+{% block content %}
+
+<article class="article">
+    <header class="article-header">
+        <figure class="article-pic">
+            <img src="{{ current_article.image }}" alt="">
+        </figure>
+        <h3 class="article-title">{{ current_article.title }}</h3>
+        <time class="article-date" datetime="">{{ current_article.create_date }}</time>
+        <address class="article-author">автор: {{ current_article.author }}</address>
+    </header>
+    <section class="article-text">
+        {{ current_article.text|linebreaks }}
+    </section>
+    <aside class="article-aside">
+    <header>
+        <h6>Сподели:</h6>
+    </header>
+    <ul>
+        <li><i class="fab fa-facebook-square"></i> Facebook</li>
+        <li><i class="fab fa-facebook-messenger"></i> Messenger</li>
+        <li><i class="fab fa-twitter-square"></i> Twitter</li>
+        <li><i class="fab fa-linkedin"></i> LinkedIn</li>
+        <li><i class="fab fa-viber"></i> Viber</li>
+        <li><i class="far fa-envelope"></i> Email</li>
+        <li><i class="fas fa-print"></i> Print</li>
+    </ul>
+</aside>
+    <footer class="article-footer">
+
+    </footer>
+</article>
+
+{% endblock content %}
