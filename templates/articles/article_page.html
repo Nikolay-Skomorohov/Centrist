@@ -1,7 +1,9 @@
 {%  extends 'common/index.html' %}
 
-{% block content %}
+{% load static %}
 
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'articles/css/article.css' %}">
 <article class="article">
     <header class="article-header">
         <figure class="article-pic">

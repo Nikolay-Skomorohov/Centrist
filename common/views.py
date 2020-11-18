@@ -25,12 +25,6 @@ def gallery(request):
     return HttpResponse(template.render(context, request))
 
 
-def newsletter(request):
-    template = loader.get_template('common/newsletter.html')
-    context = {}
-    return HttpResponse(template.render(context, request))
-
-
 def about(request):
     template = loader.get_template('common/about.html')
     context = {}
