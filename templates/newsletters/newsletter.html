@@ -7,11 +7,17 @@
 <link rel="stylesheet" type="text/css" href="{% static 'newsletters/css/newsletter.css' %}">
 <h3 class="page-title">Newsletter</h3>
 <section class="newsletter-wrapper">
-    <p>Абонирай се да получаваш най-новите публикувани статии по пощата. </p>
-    <p>Можеш да отбележиш дали да получаваш всичко или само избрани категории. </p>
+    <p>Абонирай се да получаваш най-новите публикувани статии по електронната поща. Абонирай се да получаваш най-новите публикувани статии по електронната поща. Абонирай се да получаваш най-новите публикувани статии по електронната поща. Абонирай се да получаваш най-новите публикувани статии по електронната поща. </p>
     <form action="{% url 'subscribe' %}" class="newsletter-form" method="POST">
         {% csrf_token %}
-        {{ form }}
+        <ul class="newsletter-email-form">
+            <li class="newsletter-email-input">
+                {{ form.subscriber_email }}
+            </li>
+            <li class="newsletter-email-button">
+                <button>Абонирай се</button>
+            </li>
+        </ul>
     </form>
 </section>
 
