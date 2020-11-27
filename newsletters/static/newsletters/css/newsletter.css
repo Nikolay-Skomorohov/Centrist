@@ -9,6 +9,7 @@
 }
 
 .newsletter-form ul {
+    padding-top: 1.5em;
     list-style: none;
 }
 
@@ -53,4 +54,9 @@
 .newsletter-email-button button:hover {
     background-color: var(--site-accent-color);
     color: var(--heading-footer-text-color);
+}
+
+.newsletter-unsubscribe-note {
+    font-style: italic;
+    text-align: center;
 }
