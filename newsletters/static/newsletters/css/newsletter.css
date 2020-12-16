@@ -34,6 +34,13 @@
     vertical-align: middle;
 }
 
+.newsletter-email-input input {
+    padding: 0.5rem;
+    width: 95%;
+    font-size: 1.0em;
+    vertical-align: middle;
+}
+
 .newsletter-email-button {
     flex: 0 1 auto;
 }

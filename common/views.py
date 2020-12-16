@@ -3,7 +3,7 @@ from django.shortcuts import render
 from articles.models import Article
 
 
-def index(request):
+def home(request):
     articles_list = Article.objects.order_by('id').reverse()
     paginator = Paginator(articles_list, 5)
     page_number = request.GET.get('page')

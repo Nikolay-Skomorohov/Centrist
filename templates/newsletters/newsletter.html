@@ -13,11 +13,11 @@
         <ul class="newsletter-email-form">
             <li class="newsletter-email-input">
                 {{ form.subscriber_email }}
-                {{ form.subscriber_email.errors }}
             </li>
             <li class="newsletter-email-button">
                 <button>Абонирай се</button>
             </li>
+            {{ form.subscriber_email.errors }}
         </ul>
     </form>
     <p class="newsletter-unsubscribe-note">*Можете да се отпишете по всяко време чрез опцията в получените имейли.</p>

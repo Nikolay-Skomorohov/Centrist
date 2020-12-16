@@ -8,8 +8,8 @@
     <script src="https://kit.fontawesome.com/9cd6a1b86f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="{% static 'common/css/styles.css' %}">
     <script>
-        window.addEventListener('load', (event) => {
-            document.querySelector('body').classList.add('loaded');
+        window.addEventListener("load", (event) => {
+            document.querySelector('body').classList.add("loaded");
         });
     </script>
     <title>Центрист</title>
@@ -20,19 +20,22 @@
             <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-toggle">
             <label for="mobile-menu-toggle"><i class="fas fa-bars"></i></label>
             <nav class="site-header-navigation">
-                <div><a href="{% url "index" %}">Най-нови</a></div>
+                <div><a href="{% url "home" %}">Най-нови</a></div>
                 <div><a href="{% url "categories" %}">Категории</a></div>
                 <div><a href="{% url "gallery" %}">Галерия</a></div>
                 <div><a href="{% url "newsletter" %}">Newsletter</a></div>
                 <div><a href="{% url "about" %}">За сайта</a></div>
                 <div><a href="{% url "profile" %}">Профил</a></div>
             </nav>
-            <h1 class="site-header-title"><a href="{% url "index" %}">Центрист</a></h1>
+            <h1 class="site-header-title"><a href="{% url "home" %}">Центрист</a></h1>
             <input type="checkbox" id="mobile-search-toggle" class="mobile-search-toggle">
             <div class="site-header-search">
                 <label for="mobile-search-toggle"><i class="fas fa-search"></i></label>
                 <ul class="search-entry-field">
-                    <li><input type="text" id="search-entry-field" width=100% placeholder="Търсене в сайта" autofocus><label for="search-entry-field"><i class="fas fa-search"></i></label></li>
+                    <li>
+                        <input type="text" id="search-entry-field" width=100% placeholder="Търсене в сайта" autofocus>
+                        <label for="search-entry-field"><i class="fas fa-search"></i></label>
+                    </li>
                 </ul>
             </div>
         </header>
@@ -56,7 +59,7 @@
                     <li><a href="#"><i class="fab fa-youtube"></i></a></li>
                 </ul>
             </address>
-            <p>Всички права запазени - ©2019-2020</p>
+            <p>Всички права запазени - ©2019-2021</p>
         </footer>
     </div>
 </body>
