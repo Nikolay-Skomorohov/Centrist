@@ -8,11 +8,12 @@
 <h3 class="page-title">Newsletter</h3>
 <section class="newsletter-wrapper">
     <p>Абонирай се да получаваш най-новите публикувани статии по електронната поща. Абонирай се да получаваш най-новите публикувани статии по електронната поща. Абонирай се да получаваш най-новите публикувани статии по електронната поща. Абонирай се да получаваш най-новите публикувани статии по електронната поща. </p>
-    <form action="{% url 'subscribe' %}" class="newsletter-form" method="POST">
+    <form class="newsletter-form" method="POST" action="{% url 'newsletter' %}" >
         {% csrf_token %}
         <ul class="newsletter-email-form">
             <li class="newsletter-email-input">
                 {{ form.subscriber_email }}
+                {{ form.subscriber_email.errors }}
             </li>
             <li class="newsletter-email-button">
                 <button>Абонирай се</button>
