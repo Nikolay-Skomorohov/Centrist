@@ -6,7 +6,12 @@ from newsletters.models import SubscribersList
 class SubscribeForm(ModelForm):
     class Meta:
         model = SubscribersList
-        fields = ['subscriber_email']
+        fields = ["subscriber_email"]
 
-    subscriber_email = forms.CharField(widget=forms.EmailInput(attrs={'placeholder': 'Въведи своята електранна поща',
-                                                                      }))
+    subscriber_email = forms.CharField(
+        widget=forms.EmailInput(
+            attrs={
+                "placeholder": "Въведи своята електранна поща",
+            }
+        )
+    )

@@ -8,34 +8,56 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Author',
+            name="Author",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=60)),
-                ('image', models.TextField(default='')),
-                ('articles', models.TextField(default='')),
-                ('info', models.TextField(default='')),
-                ('email', models.EmailField(max_length=254)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=60)),
+                ("image", models.TextField(default="")),
+                ("articles", models.TextField(default="")),
+                ("info", models.TextField(default="")),
+                ("email", models.EmailField(max_length=254)),
             ],
         ),
         migrations.CreateModel(
-            name='Article',
+            name="Article",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(max_length=255)),
-                ('text', models.TextField(default='')),
-                ('create_date', models.TextField(default='')),
-                ('last_modified', models.TextField(default='')),
-                ('image', models.TextField(default='')),
-                ('summary', models.TextField(default='')),
-                ('page_views', models.IntegerField(default=0)),
-                ('comments', models.TextField(default='')),
-                ('author', models.ForeignKey(default='Anonymous', on_delete=django.db.models.deletion.SET_DEFAULT, to='articles.author')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("title", models.CharField(max_length=255)),
+                ("text", models.TextField(default="")),
+                ("create_date", models.TextField(default="")),
+                ("last_modified", models.TextField(default="")),
+                ("image", models.TextField(default="")),
+                ("summary", models.TextField(default="")),
+                ("page_views", models.IntegerField(default=0)),
+                ("comments", models.TextField(default="")),
+                (
+                    "author",
+                    models.ForeignKey(
+                        default="Anonymous",
+                        on_delete=django.db.models.deletion.SET_DEFAULT,
+                        to="articles.author",
+                    ),
+                ),
             ],
         ),
     ]

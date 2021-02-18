@@ -6,38 +6,38 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('articles', '0001_initial'),
+        ("articles", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='article',
-            name='image',
+            model_name="article",
+            name="image",
             field=models.URLField(),
         ),
         migrations.AlterField(
-            model_name='article',
-            name='summary',
-            field=models.TextField(default='', max_length=300),
+            model_name="article",
+            name="summary",
+            field=models.TextField(default="", max_length=300),
         ),
         migrations.AlterField(
-            model_name='article',
-            name='title',
+            model_name="article",
+            name="title",
             field=models.CharField(max_length=150, unique=True),
         ),
         migrations.AlterField(
-            model_name='author',
-            name='email',
+            model_name="author",
+            name="email",
             field=models.EmailField(max_length=254, null=True, unique=True),
         ),
         migrations.AlterField(
-            model_name='author',
-            name='image',
+            model_name="author",
+            name="image",
             field=models.URLField(null=True),
         ),
         migrations.AlterField(
-            model_name='author',
-            name='name',
+            model_name="author",
+            name="name",
             field=models.CharField(max_length=60, unique=True),
         ),
     ]

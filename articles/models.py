@@ -3,6 +3,7 @@ from django.db import models
 
 # Create your models here.
 
+
 class Author(models.Model):
     name = models.CharField(max_length=60, null=False, unique=True)
     image = models.URLField(null=True)
@@ -16,7 +17,9 @@ class Author(models.Model):
 
 class Article(models.Model):
     title = models.CharField(max_length=150, null=False, unique=True)
-    author = models.ForeignKey(Author, default="Anonymous", on_delete=models.SET_DEFAULT)
+    author = models.ForeignKey(
+        Author, default="Anonymous", on_delete=models.SET_DEFAULT
+    )
     text = models.TextField(default="")
     create_date = models.TextField(default="")
     last_modified = models.TextField(default="")
